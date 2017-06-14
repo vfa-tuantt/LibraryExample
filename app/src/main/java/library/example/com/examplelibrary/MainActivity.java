@@ -1,9 +1,11 @@
 package library.example.com.examplelibrary;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import library.example.com.librarytutorial.MainActivityTest;
 import library.example.com.librarytutorial.MyView;
 import library.example.com.librarytutorial.MyViewInterFace;
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
             public void callBackClick(boolean isAction) {
                 if(isAction){
                     finish();
+                }else{
+                    startActivity(new Intent(MainActivity.this, MainActivityTest.class));
                 }
             }
         });
